@@ -107,11 +107,14 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
       <p>You can click on a cell to toggle that light — but it also toggles the light above it,
         to the left of it, to the right of it, and below it.
       </p>
-      <table className="Board">
-        {hasWon(board) === "winner" ?
-          <h2> Congratulations! You have won!</h2>
-          : <tbody>{boardTable}</tbody>}
-      </table>
+
+      {hasWon(board) === "winner" ?
+        <h2> Congratulations! You have won!</h2>
+        :
+        <table className="Board">
+          <tbody>{boardTable}</tbody>
+        </table>
+      }
     </>
   );
 
