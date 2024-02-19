@@ -108,7 +108,7 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
         to the left of it, to the right of it, and below it.
       </p>
 
-      {hasWon(board) === "winner" ?
+      {hasWon(board) ?
         <h2> Congratulations! You have won!</h2>
         :
         <table className="Board">
